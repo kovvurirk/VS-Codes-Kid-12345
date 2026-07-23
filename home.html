@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Kids Learning PortalHW</title>
+    <style>
+      /* Ensure consistent CSS styling for layout, fonts, spacing, and visual polish */
+      body {
+        font-family: 'Segoe UI', Tahoma , Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #d9fcfa;
+      }
+      .header {
+        background: linear-gradient(to right, #baf5f1, #06002d);
+        padding: 20px 20px 60px 20px;
+        position: relative;
+        text-align: center;
+        color: #fff;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 2em;
+        font-weight: 600;
+      }
+       .cards {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        gap: 12px;
+      }
+      .card {
+        padding: 10px 18px;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgb(3, 0, 29);
+      }
+         .quiz {
+        background: linear-gradient(135deg, #d092f9, #230037);
+        color: #fff;
+      }
+      .feedback {
+        background: linear-gradient(135deg, #9cfaaed5, #012709);
+        color: #fff;
+      }
+      .fun-corner {
+        background: linear-gradient(135deg, #f49bba, #26000d);
+        color: #fff;
+      }
+      .img-placeholder {
+        width: 80px;
+        height: auto;
+        border-radius: 50%;
+        margin-top: 20px;
+        box-shadow: 0 2px 8px rgba(15, 0, 55, 0.783);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .timetable-container {
+        width: 95%;
+        margin: 30px auto;
+        text-align: center;
+      }
+      .timetable-table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 0 10px rgba(0, 12, 64, 0.708);
+        background: #fff;
+      }
+      .timetable-table th,
+      .timetable-table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        vertical-align: middle;
+      }
+      .timetable-table th {
+        background-color:#062901;
+        color: #fff;
+        font-size: 1.1rem;
+      }
+      .timetable-table td {
+        font-size: 1rem;
+        background-color: #b6fcb6;
+        text-align: center;
+      }
+      .timetable-table a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #290015;
+      }
+    </style>
+</head>
+<body>
+  <img src="https://www.shutterstock.com/image-vector/african-american-woman-avatar-glasses-260nw-2089979035.jpg" alt="Avatar" class="img-placeholder">
+  <div class="header">
+    <h1 id="welcome">Welcome, Grade 4 Student!</h1>
+    <div class="cards">
+      <a href="quiz.html" class="card quiz">Quiz</a>
+      <a href="feedback.html" class="card feedback">Feedback</a>
+      <a href="fun-corner.html" class="card fun-corner">Fun Corner</a>
+      </div>
+    </div>
+
+    <!-- Weekly planner table using HTML <table>, styled and made interactive-->
+    <div class="timetable-container"> 
+      <h2>📓 Grade 4 Weekly Planner</h2>
+      <div class="button-container">
+        <!-- Buttons to enable editing and save changes in the planner -->
+        <button onclick="enableEdit()">Edit</button>
+        <button onclick="saveChanges()">Save</button>
+      </div>
+    </div>
+    
+    <table class="timetable-table" id="timetable">
+      <thead>
+        <tr>
+          <th>Time:</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Saturday</th>
+          <th>Sunday</th>
+        </tr>
+      </thead>
+      
+        <tr>
+          <td>7:40 AM - 3:30 PM</td>
+          <td colspan="5">School & Lunch 🍲🏫 (Summer, Games, and Reading)</td>
+          <td colspan="2"> Free Time</td>
+        </tr>
+        <tr>
+          <td>3:30 - 4:00</td>
+          <td colspan="5">Snack Time 🍎</td>
+          <td><a href="dance.html">Dance</a></td>
+          <td colspan="1">Free Time</td>
+        </tr>
+        <tr>
+          <td>4:00 - 5:00</td>
+          <td><a href="math.html">98thpercentile Math</a></td>
+          <td><a href="swimming.html">Swimming(4:30-5:30)</a></td>
+          <td><a href="math.html">98thpercentile Math</a></td>
+          <td><a href="swimming.html">Swimming(4:30-5:30)</a></td>          
+          <td colspan="3">Free Time</td>
+        </tr>
+        <tr>
+          <td>5:00 - 6:00</td>
+          <td><a href="swimming.html">Swimming(5:30-6:30)</a></td>
+          <td><a href="swimming.html">Swimming(4:30-5:30)</a></td>
+          <td><a href="swimming.html">Swimming(5:30-6:30)</a></td>
+          <td><a href="swimming.html">Swimming(4:30-5:30)</a></td>
+          <td><a href="tennis.html">Tennis(5:30-7:00)</a></td>
+          <td colspan="2">Family Time</td>
+        </tr>
+        <tr>
+          <td>6:00 - 7:00</td>
+          <td colspan="3">Shower Time</td>
+          <td><a href="piano.html">Piano</a></td>
+          <td><a href="tennis.html">Tennis(5:30-7:00)</a></td>
+          <td colspan="2">Family Time</td>
+        </tr>
+        <tr>
+          <td>7:00 - 8:00</td>
+          <td><a href="coding.html">98thpercentile Coding</a></td>
+          <td>Dinner Time</td>
+          <td><a href="coding.html">98thpercentile Coding</a></td>
+          <td> Dinner Time</td>
+          <td>Shower Time</td>
+          <td colspan="2">Dinner Time</td>
+        </tr>
+        <tr>
+          <td>8:00 - 10:00 PM</td>
+          <td colspan="7">Sleep Time 🛌</td>
+        </tr>
+      </table> 
+    </div>
+
+    <script>
+       const subjects = [
+        {name: "98thPercentile Math", link: "math.html"},
+        {name: "Dance", link: "dance.html"},
+        {name: "Free Time", link: ""},
+        {name: "Coding", link: "coding.html"},
+        {name: "Tennis", link: "tennis.html"},
+        {name: "Family Time", link: ""},
+        {name: "Shower Time", link: ""},
+        {name: "Piano", link: "piano.html"},
+        {name: "Swimming", link: "swimming.html"},
+        {name: "Dinner Time", link: ""},
+      ];
+
+      function enableEdit() {
+        const table = document.getElementById("timetable");
+
+        for (let r = 1; r < table.rows.length; r++) {
+          const row = table.rows[r];
+
+          for (let c = 1; c < row.cells.length; c++) {
+            const cell = row.cells[c];
+            if (cell.colSpan > 1) continue; // Skip merged cells
+            const text = cell.innerText.trim();
+            const select = document.createElement('select');
+
+            subjects.forEach(sub => {
+              const opt = document.createElement('option');
+              opt.value = sub.name;
+              opt.textContent = sub.name;
+              if (sub.name === text) opt.selected = true;
+              select.appendChild(opt);
+
+            });
+
+            cell.innerHTML = '';
+            cell.appendChild(select);
+          }
+        }
+      }
+
+      function saveChanges() {
+
+        const table = document.getElementById('timetable');
+
+        for (let r = 1; r < table.rows.length; r++) {
+          const row = table.rows[r];
+
+          for (let c = 1; c < row.cells.length; c++) {
+            const cell = row.cells[c];
+            if (cell.colSpan > 1) continue; // Skip merged cells
+            const select = cell.querySelector('select');
+
+            if (select) {
+              const val = select.value;
+              const subj = subjects.find(s => s.name === val);
+              cell.innerHTML = subj.link
+                ? `<a href="${subj.link}">${subj.name}</a>`
+                : subj.name;
+                
+            }
+          }
+        }
+      }
+        (function() {
+          // The key under which the profile form saved the student's name
+          const nameKey = 'studentName';
+          // Retrieve the student's name from localStorage
+          const studentName = localStorage.getItem(nameKey);
+          // If a name exists, update the welcome heading dynamically
+          if (studentName) {
+            const welcomeEI = document.getElementById('welcome');
+            welcomeEI.textContent = `Welcome, ${studentName}!`;
+          }
+        }
+      )();
+
+    </script>
+</body>
+</html>
+

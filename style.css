@@ -1,0 +1,30 @@
+/* Base styles: set global front, remove default margin, set background and text color, center text */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: url(https://img.freepik.com/premium-vector/white-background-with-emerald-green-gold-corner_527873-612.jpg) no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #333;
+    text-align: center;
+}
+
+/* Header styling: padding around text and white font color */
+.header {
+    padding: 20px;
+    color: #333;
+}
+
+ /* Form elements styling: padding inside inputs/buttons, spacing above, rounded corners, and no borders */
+ form input, form button {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+ }
+  .content {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+  }

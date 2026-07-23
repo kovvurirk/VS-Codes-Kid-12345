@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0;}
+
+        /* UI enhancement/Troobleshooting - Style body text for readability */
+            body {
+               font-family: 'Brush Script MT', sans-serif;
+               margin: 0;
+               background-color: #aaf5fa;
+               color: #dad5d5;
+               text-align: center;
+               font-size: 1.2em;
+               line-height: 1.5;
+            } 
+
+            .header {
+                background: linear-gradient(to right, #bcfebb, #0c4700);
+                padding: 30px 20px;
+                text-align: center;
+                color: #fff;
+                box-shadow: 0 4px 8px rgb(0, 54, 6);
+            }
+
+            .header h1 {
+                font-size: 2rem;
+                font-weight: 300;
+            }
+
+            #star-rating {
+                font-size: 2rem;
+                cursor: pointer;
+            }
+            #star-rating span {
+                display: inline-block;
+                color: darkred;
+                background: none;
+                padding: 0 0.2rem;
+                margin: 0 0.1rem;
+                transition: color 0.2s;
+            }
+            #star-rating span.filled {
+                color: gold;
+                -webkit-text-stroke: 1.3px darkred;
+                -webkit-text-fill-color: gold;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Give Your Feedback!</h1>
+    </div>
+
+    <div class="feedback-container">
+        <form id="feedbackForm">
+            <div class="form-group">
+                <div style="margin-top: 50px; margin-bottom: 20px;">
+                <label for="emailf">Email:</label>
+                <input type="email" id="emailf" placeholder="Enter Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fsubject">Page:</label>
+                <select id="fsubject">
+                    <option>Home</option>
+                    <option>Fun-Corner</option>
+                    <option>Math</option>
+                    <option>Coding</option>
+                    <option>Quiz</option>
+                    <option>Dance</option>
+                    <option>Swimming</option>
+                    <option>Piano</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fmessage">Feedback:</label>
+                <textarea id="fmessage" rows="3" placeholder="Write your feedback here..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Submit Feedback</button>
+        </form>
+        <p id="foutput" class="output"></p>
+      </div>
+
+        <h3 id="rating-text">Overall rating! Click to rate!</h3>
+        <p>(This includes all pages, Creativeness, and Usability)</p>
+        
+        <div id="star-rating">
+            <span data-value="1">☆</span>
+            <span data-value="2">☆</span>
+            <span data-value="3">☆</span>
+            <span data-value="4">☆</span>
+            <span data-value="5">☆</span>
+        </div>
+        
+
+        <script>
+
+            const stars = document.querySelectorAll("#star-rating span");
+            const text = document.getElementById("rating-text");
+            const key = "savedRating";
+
+            function show(rating) {
+                stars.forEach(star => {
+                const value = Number(star.dataset.value);
+                const isFilled = value <= rating;
+                star.classList.toggle("filled", isFilled);
+                star.textContent = isFilled ? "★" : "☆";
+            });
+
+            text.textContent = rating
+                ? `You chose ${rating} star!${rating === 1 ? "" : "s"}`
+                : "Choose your overall rating!";
+            }
+
+            const savedValue = Number(localStorage.getItem(key));
+            const saved = savedValue >= 1 && savedValue <= 5 ? savedValue : 0;
+            show(saved);
+
+            stars.forEach(star => {
+                star.addEventListener("click", () => {
+                const rating = Number(star.dataset.value);
+                localStorage.setItem(key, rating);
+                show(rating);
+            });
+        });
+        </script>
+</body>
+</html>

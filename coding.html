@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Coding-Kids Learning Portal</title>
+        <link rel="stylesheet" href="styles.css">
+</head>
+    <style>
+       
+       /* UI enhancement/Troobleshooting - Customized header background for this section */
+            .header {  background: linear-gradient(135deg, #ffaaaa, #350000); text-align: center; padding: 20px; color: #fff;}
+            /* UI enhancement/Troobleshooting - Style footer area for visual consistency */
+            footer {  background: linear-gradient(135deg, #ffaaaa, #350000); padding: 10px; text-align: center; color: #fff;}
+
+            body {
+               font-family: 'Brush Script MT', sans-serif;
+               margin: 0;
+               background-color: #f4eeb0;
+               color: #bab7b7;
+               text-align: center;
+               font-size: 1.2em;
+            }
+
+            form {
+               font-family: 'Brush Script MT', sans-serif;
+               color: #3d3100;
+
+            }    
+            
+            button {
+         background: linear-gradient(135deg, #f5c693,#f9caca); text-align: center; padding: 10px; color: #ffffff; border-radius: 8px; border: 2px solid #660020;
+      }
+            </style>
+    
+<body>
+    <!-- Centered featured image to engage students visually -->
+    <div style="text-align:center;">
+        <img src="https://www.computersciencedegreehub.com/wp-content/uploads/2023/02/shutterstock_535124956-scaled.jpg" alt="Coding Image" class="img-placeholder" width="400">
+    </div>
+    <!-- Section heading introduction basic science concepts -->
+     <div style="padding: 20px; text-align: center;">
+     <h2>What is Coding?</h2>
+        <p>Coding is like writing a super detailed recipe for a computer to follow. Computers are really fast at doing work, but they aren't smart enough to know what to do on their own. When you write code, you are giving the computer step-by-step directions—telling it when to jump, make a sound, or display a picture on the screen!</p>
+        <p>Just like people speak different languages like English or Spanish, computers have special languages, too! Some coding languages, like Scratch, use colorful blocks you snap together like LEGO bricks. Others, like Python or JavaScript, use typed words and numbers. No matter which one you use, they all help us talk to the computer so it understands our instructions.</p>
+        <p>With code, you get to be a digital creator! You can use it to build your very own video games, design websites, make cool phone apps, or even tell a real-life robot how to drive around and dance. If you can imagine an idea, coding gives you the magic powers to make it come to life on a screen!</p>
+     </div>
+
+        <!-- Section title for the Science page -->
+         <div class="header">
+            <h1>Coding: JS, CSS, and HTML!</h1>
+         </div>
+
+         <div class="content">
+             <div style="text-align:center;"><!-- inline CSS -->
+                <h2>Coding Topics:</h2>
+                <!-- List of science topics covered -->
+                <ol style="display: inline-block; text-align: left;">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript (Local Storage, DOM Manipulation, etc.)</li>
+                </ol>
+            <!-- Embed a "Let's Understand it!" video for multimedia learning-->
+            <h2> Tic Tac Toe Game in HTML, CSS, and JavaScript Tutorial</h2>
+            <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/LD9UEC7AI7g"
+                    title="CodeTic Tac Toe Game in Javascript HTML CSS"
+                    frameborder="0"
+                    allow="accelerometer, autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture, web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+            </iframe>
+             </div>
+         </div>
+
+    <!-- container for quiz questions -->
+     <div style="padding: 20px; text-align: center;">
+    <div class="content">
+        <form id="quizForm">
+            <h2 style="color: #3d3100;">Coding Quiz!</h2>
+        <p style="border-bottom: 2px solid #3d3100; color: #3d3100; padding-bottom: 5px;">Test your coding knowledge!</p>
+           <pre><p><strong> 1: What does the initial score usually start as in JavaScript quiz logic?</strong></pre>
+            <input type="radio" name="q1" value="a"> 0<br><!-- Correct answer -->
+            <input type="radio" name="q1" value="b"> 5<br>
+            <input type="radio" name="q1" value="c"> 10<br>
+            <input type="radio" name="q1" value="d"> 100<br>
+            </p><br>
+
+            <pre><p><strong> Which code correctly displays the score in JavaScript?</strong></pre>
+            <input type="radio" name="q2" value="a"> score = "Score:" + 0;<br><br>
+            <input type="radio" name="q2" value="b"> print("score");<br><br>
+            <input type="radio" name="q2" value="c"> document.getElementById("score").innerText = score;<br><br> <!-- Correct answer -->
+            <input type="radio" name="q2" value="d"> show.score();<br><br>
+            </p><br>
+
+            <pre><p><strong>3: Which combination is BEST for a functional and styled quiz page?</strong></pre>
+            <input type="radio" name="q3" value="a">HTML for structure, CSS for design, JavaScript for logic<br><br><!-- Correct answer -->
+            <input type="radio" name="q3" value="b">HTML for logic, CSS for structure, JavaScript for styling<br><br>
+            <input type="radio" name="q3" value="c">CSS for logic, HTML for design, JavaScript for structure<br><br>
+            <input type="radio" name="q3" value="d">JavaScript for design, HTML for styling, CSS for logic<br><br>
+            </p><br>
+
+            <pre><p><strong>4: If radio buttons are not grouped properly, what problem occurs?</strong></pre>
+            <input type="radio" name="q4" value="a"> The submit button stops working.<br><br>
+            <input type="radio" name="q4" value="b"> Users can select multiple options at the same time.<br><br><!-- Correct answer -->
+            <input type="radio" name="q4" value="c"> The text turns invisible.<br><br>
+            <input type="radio" name="q4" value="d"> The quiz automatically submits.<br><br>
+            </p><br>
+
+
+            <pre><p><strong>5: If students find the quiz confusing, which design change is BEST?</strong></pre>
+            <input type="radio" name="q5" value="a"> Change all text to a single color with no spacing<br><br>
+            <input type="radio" name="q5" value="b"> Remove all buttons<br><br>
+            <input type="radio" name="q5" value="c"> Add more questions per page<br><br>
+            <input type="radio" name="q5" value="d">Add clear labels, simple formatting, and visible buttons<br><br><!-- Correct answer -->
+            </p><br>
+       
+            <button type="submit">Submit</button>
+        </form>
+
+        <p id="result" style="font-weight: bold; margin-top: 20px; font-size: 25px; color: #3d3100;"></p>
+    </div>
+   </div>
+
+         <footer>2026 Kids Learning Portal CodingHW. All Rights Reserved</footer>
+
+            <script>
+        document.getElementById('quizForm').onsubmit = function(e) {
+            e.preventDefault();
+            let score = 0;
+            // Answers 
+            const answers = {
+                q1 : 'a',
+                q2 : 'c',
+                q3 : 'a',
+                q4 : 'b',
+                q5 : 'd',
+            };
+            for (let i =1; i<= 5; i++) {
+                const q = document.querySelector('input[name="q' + i + '"]:checked');
+                if (q && q.value === answers['q' + i]) score++;
+            }
+            document.getElementById('result').innerText = `You scored ${score} out of 5!`;
+        };
+        </script>
+</body>
+</html>
